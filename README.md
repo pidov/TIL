@@ -6,6 +6,7 @@ A collection of small nifty trics that I learn on a day to day basis.
 
 * [Git](#git)
 * [VIM](#vim)
+
 ---
 
 ### Git
