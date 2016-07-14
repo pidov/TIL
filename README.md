@@ -14,3 +14,6 @@ A collection of small nifty trics that I learn on a day to day basis.
 
 ### Vim
 - [Configuring indentation](vim/configuring-indentation.md)
+
+### Windows
+- [Setting environment variables](windows/setting-environment-variables.md)
