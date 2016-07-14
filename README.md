@@ -14,6 +14,8 @@ A collection of small nifty trics that I learn on a day to day basis.
 
 ### Vim
 - [Configuring indentation](vim/configuring-indentation.md)
+- [Getting the location of .vimrc](vim/location-of-vimrc.md)
+- [Swap two lines](vim/swap-lines.md)
 
 ### Windows
 - [Setting environment variables](windows/setting-environment-variables.md)
