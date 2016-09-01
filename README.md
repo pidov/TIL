@@ -19,3 +19,6 @@ A collection of small nifty trics that I learn on a day to day basis.
 
 ### Windows
 - [Setting environment variables](windows/setting-environment-variables.md)
+
+### npm
+- [How to disable npm progress bar?](disable-npm-progress-bar.md)
