@@ -12,6 +12,9 @@ A collection of small nifty trics that I learn on a day to day basis.
 ### Git
 - [Renaming a branch](git/renaming-a-branch.md)
 
+### Mongoose
+- [How to refrence a document from another document](mongoose/reference-document-from-another-document.md)
+
 ### Vim
 - [Configuring indentation](vim/configuring-indentation.md)
 - [Getting the location of .vimrc](vim/location-of-vimrc.md)
