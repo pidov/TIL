@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>My New Hugo Site</title>
+    <link>https://pidov.github.io/TIL/index.xml</link>
+    <description>Recent content on My New Hugo Site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 06 Nov 2016 00:28:56 +0200</lastBuildDate>
+    <atom:link href="https://pidov.github.io/TIL/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>npm</title>
+      <link>https://pidov.github.io/TIL/npm/</link>
+      <pubDate>Sun, 06 Nov 2016 00:28:56 +0200</pubDate>
+      
+      <guid>https://pidov.github.io/TIL/npm/</guid>
+      <description>
+
+&lt;h1 id=&#34;npm&#34;&gt;npm&lt;/h1&gt;
+
+&lt;p&gt;Lorem ipsum&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Mongoose</title>
+      <link>https://pidov.github.io/TIL/mongoose/</link>
+      <pubDate>Sun, 06 Nov 2016 00:25:10 +0200</pubDate>
+      
+      <guid>https://pidov.github.io/TIL/mongoose/</guid>
+      <description>
+
+&lt;h1 id=&#34;mongoose&#34;&gt;Mongoose&lt;/h1&gt;
+
+&lt;p&gt;Lorem ipsum&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Git</title>
+      <link>https://pidov.github.io/TIL/git/</link>
+      <pubDate>Sun, 06 Nov 2016 00:20:46 +0200</pubDate>
+      
+      <guid>https://pidov.github.io/TIL/git/</guid>
+      <description>
+
+&lt;h1 id=&#34;git&#34;&gt;Git&lt;/h1&gt;
+
+&lt;p&gt;Lorem ipsum&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Linux</title>
+      <link>https://pidov.github.io/TIL/linux/</link>
+      <pubDate>Sun, 06 Nov 2016 00:01:11 +0200</pubDate>
+      
+      <guid>https://pidov.github.io/TIL/linux/</guid>
+      <description>
+
+&lt;h1 id=&#34;linux&#34;&gt;Linux&lt;/h1&gt;
+
+&lt;p&gt;All things linux&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Disable the progress bar</title>
+      <link>https://pidov.github.io/TIL/npm/disable-progress-bar/</link>
+      <pubDate>Sun, 06 Nov 2016 00:29:34 +0200</pubDate>
+      
+      <guid>https://pidov.github.io/TIL/npm/disable-progress-bar/</guid>
+      <description>
+
+&lt;h5 id=&#34;progress-bar-in-npm-3-noticebly-slows-down-npm-install&#34;&gt;Progress bar in npm 3 noticebly slows down &lt;code&gt;npm install&lt;/code&gt;.&lt;/h5&gt;
+
+&lt;p&gt;Type the following command in the terminal to disable it:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;npm set progress=false
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Document reference</title>
+      <link>https://pidov.github.io/TIL/mongoose/document-reference/</link>
+      <pubDate>Sun, 06 Nov 2016 00:25:46 +0200</pubDate>
+      
+      <guid>https://pidov.github.io/TIL/mongoose/document-reference/</guid>
+      <description>
+
+&lt;h4 id=&#34;how-to-create-a-reference-to-another-document-and-populate-it-with-data&#34;&gt;How to create a reference to another document and populate it with data&lt;/h4&gt;
+
+&lt;p&gt;First create the proper schema and define the reference.
+The value of &lt;code&gt;ref&lt;/code&gt; is the name of the &lt;strong&gt;model&lt;/strong&gt; that you&amp;rsquo;re going to refer to.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;var personSchema = new Schema({
+  name: String,
+  books: [{
+    type: Schema.Types.ObjectId,
+    ref: &#39;Book&#39;
+  }]
+});
+
+var bookSchema = new Schema({
+  title: String
+});
+
+var Person = mongoose.model(&#39;Person&#39;, personSchema);
+var Book = mongoose.model(&#39;Book&#39;, bookSchema);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Creating a person with favorite book reference.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;var whiteFang = new Book({
+  title: &amp;quot;White Fang&amp;quot;
+});
+
+whiteFang.save(function(err, book) {
+  // Handle errors and save the id for reference. Let&#39;s assume that the id is &amp;quot;asd98123jg0aasdlfk9&amp;quot;
+});
+
+var john = new Person({
+  name: &amp;quot;John&amp;quot;,
+  books: [
+    &amp;quot;asd98123jg0aasdlfk9&amp;quot; // Id of the book that we want. Must be a valid ObjectId format
+  ]
+});
+
+john.save();
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Populating the books array when requesting john:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;Person.findOne({name: &amp;quot;John&amp;quot;})
+	.populate(&#39;books&#39;)
+	.exec(function(err, person) {
+	  if (err) return handleError(err);
+	  console.log(person.books) // prints [{&amp;quot;_id&amp;quot;: &amp;quot;asd98123jg0aasdlfk9&amp;quot;, &amp;quot;title&amp;quot;: &amp;quot;White Fang&amp;quot;}];
+	})
+
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Renaming a branch</title>
+      <link>https://pidov.github.io/TIL/git/renaming-a-branch/</link>
+      <pubDate>Sun, 06 Nov 2016 00:20:55 +0200</pubDate>
+      
+      <guid>https://pidov.github.io/TIL/git/renaming-a-branch/</guid>
+      <description>
+
+&lt;h4 id=&#34;renaming-a-branch-locally-and-remotely&#34;&gt;Renaming a branch locally and remotely:&lt;/h4&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Switch to branch which needs to be renamed&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;pre&gt;&lt;code&gt;git branch -m &amp;lt;new_name&amp;gt;
+git push origin :&amp;lt;old_name&amp;gt;
+git push origin &amp;lt;newname&amp;gt;:refs/heads/&amp;lt;new_name&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>iptables</title>
+      <link>https://pidov.github.io/TIL/linux/iptables/</link>
+      <pubDate>Sun, 06 Nov 2016 00:17:50 +0200</pubDate>
+      
+      <guid>https://pidov.github.io/TIL/linux/iptables/</guid>
+      <description>
+
+&lt;h4 id=&#34;list-all-active-iptables-rulese-by-specification&#34;&gt;List all active iptables rulese by specification&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;iptables -S
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;add-a-simple-rule&#34;&gt;Add a simple rule&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;iptables -A INPUT -m state --state NEW,ESTABLISHED,RELATED -j ACCEPT
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;save-the-rules&#34;&gt;Save the rules&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;/sbin/service iptables save
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

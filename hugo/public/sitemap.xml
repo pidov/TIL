@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <url>
+    <loc>https://pidov.github.io/TIL/</loc>
+    <lastmod>2016-11-06T00:28:56+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://pidov.github.io/TIL/npm/</loc>
+    <lastmod>2016-11-06T00:28:56+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://pidov.github.io/TIL/mongoose/</loc>
+    <lastmod>2016-11-06T00:25:10+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://pidov.github.io/TIL/git/</loc>
+    <lastmod>2016-11-06T00:20:46+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://pidov.github.io/TIL/linux/</loc>
+    <lastmod>2016-11-06T00:01:11+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://pidov.github.io/TIL/npm/disable-progress-bar/</loc>
+    <lastmod>2016-11-06T00:29:34+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://pidov.github.io/TIL/mongoose/document-reference/</loc>
+    <lastmod>2016-11-06T00:25:46+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://pidov.github.io/TIL/git/renaming-a-branch/</loc>
+    <lastmod>2016-11-06T00:20:55+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://pidov.github.io/TIL/linux/iptables/</loc>
+    <lastmod>2016-11-06T00:17:50+02:00</lastmod>
+  </url>
+  
+</urlset>

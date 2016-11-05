@@ -1,16 +1,11 @@
 +++
-prev = "/prev/path"
-next = "/next/path"
-chapter = true
-icon = "<b>X. </b>"
-date = "2016-11-06T00:10:41+02:00"
-title = "index"
+date = "2016-11-06T00:01:11+02:00"
+title = "Linux"
 weight = 0
+chapter = true
 
 +++
 
-### Chapter X
+# Linux
 
-# Some Chapter title
-
-Lorem ipsum
+All things linux
