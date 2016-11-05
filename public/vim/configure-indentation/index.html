@@ -10,7 +10,7 @@
     <link rel="shortcut icon" href="https://pidov.github.io/TIL/images/favicon.png" type="image/x-icon" />
 
     
-    <title>Document reference</title>
+    <title>Configuring indentation </title>
     <link href="https://pidov.github.io/TIL/css/nucleus.css" rel="stylesheet">
     <link href="https://pidov.github.io/TIL/css/font-awesome.min.css" rel="stylesheet">
     <link href="https://pidov.github.io/TIL/css/hybrid.css" rel="stylesheet">
@@ -25,7 +25,7 @@
     
 
   </head>
-  <body class="" data-url="/mongoose/document-reference/">
+  <body class="" data-url="/vim/configure-indentation/">
     <nav id="sidebar">
   <div id="header-wrapper">
     <div id="header">
@@ -120,7 +120,7 @@
       
       
 
-      <li class="dd-item  parent" data-nav-id="/mongoose/">
+      <li class="dd-item  " data-nav-id="/mongoose/">
         <a href="https://pidov.github.io/TIL/mongoose/">
           <span>
             
@@ -134,7 +134,7 @@
           
           
           
-            <li class="dd-item active" data-nav-id="/mongoose/document-reference/">
+            <li class="dd-item " data-nav-id="/mongoose/document-reference/">
               <a href="https://pidov.github.io/TIL/mongoose/document-reference/">
                 <span>Document reference     </i></span>
               </a>
@@ -188,7 +188,7 @@
       
       
 
-      <li class="dd-item  " data-nav-id="/vim/">
+      <li class="dd-item  parent" data-nav-id="/vim/">
         <a href="https://pidov.github.io/TIL/vim/">
           <span>
             
@@ -202,7 +202,7 @@
           
           
           
-            <li class="dd-item " data-nav-id="/vim/configure-indentation/">
+            <li class="dd-item active" data-nav-id="/vim/configure-indentation/">
               <a href="https://pidov.github.io/TIL/vim/configure-indentation/">
                 <span>Configuring indentation      </i></span>
               </a>
@@ -295,19 +295,19 @@
                   
                 
                   
+                
+                  
+                
+                  
                     
                     
-                <a href="https://pidov.github.io/TIL/mongoose/" itemprop="url"><span itemprop="title">Mongoose</span></a> <i class="fa fa-angle-right"></i>
+                <a href="https://pidov.github.io/TIL/vim/" itemprop="url"><span itemprop="title">Vim</span></a> <i class="fa fa-angle-right"></i>
                     
                   
                 
                   
                 
-                  
-                
-                  
-                
-                <span itemprop="title"> Document reference</span>
+                <span itemprop="title"> Configuring indentation </span>
               </div>
               
 
@@ -315,61 +315,31 @@
             
     	        <div id="body-inner">
                 
-                <h1>Document reference</h1>
+                <h1>Configuring indentation </h1>
                 
 
 
 
-<h4 id="how-to-create-a-reference-to-another-document-and-populate-it-with-data">How to create a reference to another document and populate it with data</h4>
+<h4 id="replace-tab-character-with-spaces">Replace tab character with spaces:</h4>
 
-<p>First create the proper schema and define the reference.
-The value of <code>ref</code> is the name of the <strong>model</strong> that you&rsquo;re going to refer to.</p>
-
-<pre><code class="language-js">var personSchema = new Schema({
-  name: String,
-  books: [{
-    type: Schema.Types.ObjectId,
-    ref: 'Book'
-  }]
-});
-
-var bookSchema = new Schema({
-  title: String
-});
-
-var Person = mongoose.model('Person', personSchema);
-var Book = mongoose.model('Book', bookSchema);
+<pre><code>:set expandtab
 </code></pre>
 
-<p>Creating a person with favorite book reference.</p>
+<h4 id="set-the-number-of-space-characters">Set the number of space characters</h4>
 
-<pre><code class="language-js">var whiteFang = new Book({
-  title: &quot;White Fang&quot;
-});
-
-whiteFang.save(function(err, book) {
-  // Handle errors and save the id for reference. Let's assume that the id is &quot;asd98123jg0aasdlfk9&quot;
-});
-
-var john = new Person({
-  name: &quot;John&quot;,
-  books: [
-    &quot;asd98123jg0aasdlfk9&quot; // Id of the book that we want. Must be a valid ObjectId format
-  ]
-});
-
-john.save();
+<pre><code>:set tabstop=2
 </code></pre>
 
-<p>Populating the books array when requesting john:</p>
+<h4 id="reindent">Reindent</h4>
 
-<pre><code class="language-js">Person.findOne({name: &quot;John&quot;})
-	.populate('books')
-	.exec(function(err, person) {
-	  if (err) return handleError(err);
-	  console.log(person.books) // prints [{&quot;_id&quot;: &quot;asd98123jg0aasdlfk9&quot;, &quot;title&quot;: &quot;White Fang&quot;}];
-	})
+<pre><code>:retab
+</code></pre>
 
+<h4 id="default">Default</h4>
+
+<pre><code>:set expandtab
+:set shiftwidth=2
+:set softtabstop=2
 </code></pre>
 
 
