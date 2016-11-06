@@ -8,5 +8,3 @@ prev = "/prev/path"
 
 +++
 # Git
-
-Git is awesome
