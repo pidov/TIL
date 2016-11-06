@@ -9,4 +9,4 @@ prev = "/prev/path"
 +++
 # Git
 
-Lorem ipsum
+Git is awesome
