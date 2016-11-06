@@ -1,5 +1,0 @@
-title = "My New Hugo Site"
-languageCode = "en-us"
-theme = "hugo-theme-learn"
-baseurl = "https://pidov.github.io/TIL"
-canonifyurls = true
