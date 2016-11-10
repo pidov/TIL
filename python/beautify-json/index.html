@@ -10,7 +10,7 @@
     <link rel="shortcut icon" href="https://pidov.github.io/TIL/images/favicon.png" type="image/x-icon" />
 
     
-    <title>Mongoose</title>
+    <title>Beautify json string in the console</title>
     <link href="https://pidov.github.io/TIL/css/nucleus.css" rel="stylesheet">
     <link href="https://pidov.github.io/TIL/css/font-awesome.min.css" rel="stylesheet">
     <link href="https://pidov.github.io/TIL/css/hybrid.css" rel="stylesheet">
@@ -25,7 +25,7 @@
     
 
   </head>
-  <body class="" data-url="/mongoose/">
+  <body class="" data-url="/python/beautify-json/">
     <nav id="sidebar">
   <div id="header-wrapper">
     <div id="header">
@@ -128,7 +128,7 @@
       
       
 
-      <li class="dd-item active parent" data-nav-id="/mongoose/">
+      <li class="dd-item  " data-nav-id="/mongoose/">
         <a href="https://pidov.github.io/TIL/mongoose/">
           <span>
             
@@ -196,7 +196,7 @@
       
       
 
-      <li class="dd-item  " data-nav-id="/python/">
+      <li class="dd-item  parent" data-nav-id="/python/">
         <a href="https://pidov.github.io/TIL/python/">
           <span>
             
@@ -212,7 +212,7 @@
           
           
           
-            <li class="dd-item " data-nav-id="/python/beautify-json/">
+            <li class="dd-item active" data-nav-id="/python/beautify-json/">
               <a href="https://pidov.github.io/TIL/python/beautify-json/">
                 <span>Beautify json string in the console     </i></span>
               </a>
@@ -339,38 +339,42 @@
                   
                 
                   
+                
+                  
+                
+                  
                     
                     
+                <a href="https://pidov.github.io/TIL/python/" itemprop="url"><span itemprop="title">index</span></a> <i class="fa fa-angle-right"></i>
+                    
                   
                 
                   
                 
                   
                 
-                  
-                
-                  
-                
-                <span itemprop="title"> Mongoose</span>
+                <span itemprop="title"> Beautify json string in the console</span>
               </div>
               
 
             </div>
             
-              <div id="chapter">
-            
     	        <div id="body-inner">
                 
+                <h1>Beautify json string in the console</h1>
+                
+
+<p>Sometimes, while debugging (e.g. REST APIs with cURL) it&rsquo;s useful to be able to display correctly formatted and indented json. The following command helps with that:</p>
+
+<pre><code>python -mjson.tool json-file-to-beautify.json
+</code></pre>
+
+<p>Example usage with curl</p>
+
+<pre><code>curl https://ipidov.com/api/users | python -mjson.tool 
+</code></pre>
 
 
-
-<h1 id="mongoose">Mongoose</h1>
-
-<p>Lorem ipsum</p>
-
-
-      
-        </div> 
       
       </div>
     </div>
