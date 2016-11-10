@@ -22,6 +22,27 @@
     </item>
     
     <item>
+      <title>Determine remote URL</title>
+      <link>https://pidov.github.io/TIL/git/check-remote/</link>
+      <pubDate>Thu, 10 Nov 2016 11:56:27 +0200</pubDate>
+      
+      <guid>https://pidov.github.io/TIL/git/check-remote/</guid>
+      <description>&lt;pre&gt;&lt;code&gt;git remote show origin 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Example response:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;remote origin
+Fetch URL: git@github.com:pidov/til.git
+Push  URL: git@github.com:pidov/til.git
+HEAD branch: master
+Remote branches:
+
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Renaming a branch</title>
       <link>https://pidov.github.io/TIL/git/renaming-a-branch/</link>
       <pubDate>Sun, 06 Nov 2016 00:20:55 +0200</pubDate>
