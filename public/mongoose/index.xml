@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Mongoose-rsses on My New Hugo Site</title>
+    <link>https://pidov.github.io/TIL/mongoose/index.xml</link>
+    <description>Recent content in Mongoose-rsses on My New Hugo Site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 06 Nov 2016 00:25:10 +0200</lastBuildDate>
+    <atom:link href="https://pidov.github.io/TIL/mongoose/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Mongoose</title>
+      <link>https://pidov.github.io/TIL/mongoose/</link>
+      <pubDate>Sun, 06 Nov 2016 00:25:10 +0200</pubDate>
+      
+      <guid>https://pidov.github.io/TIL/mongoose/</guid>
+      <description>
+
+&lt;h1 id=&#34;mongoose&#34;&gt;Mongoose&lt;/h1&gt;
+
+&lt;p&gt;Lorem ipsum&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Document reference</title>
+      <link>https://pidov.github.io/TIL/mongoose/document-reference/</link>
+      <pubDate>Sun, 06 Nov 2016 00:25:46 +0200</pubDate>
+      
+      <guid>https://pidov.github.io/TIL/mongoose/document-reference/</guid>
+      <description>
+
+&lt;h4 id=&#34;how-to-create-a-reference-to-another-document-and-populate-it-with-data&#34;&gt;How to create a reference to another document and populate it with data&lt;/h4&gt;
+
+&lt;p&gt;First create the proper schema and define the reference.
+The value of &lt;code&gt;ref&lt;/code&gt; is the name of the &lt;strong&gt;model&lt;/strong&gt; that you&amp;rsquo;re going to refer to.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;var personSchema = new Schema({
+  name: String,
+  books: [{
+    type: Schema.Types.ObjectId,
+    ref: &#39;Book&#39;
+  }]
+});
+
+var bookSchema = new Schema({
+  title: String
+});
+
+var Person = mongoose.model(&#39;Person&#39;, personSchema);
+var Book = mongoose.model(&#39;Book&#39;, bookSchema);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Creating a person with favorite book reference.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;var whiteFang = new Book({
+  title: &amp;quot;White Fang&amp;quot;
+});
+
+whiteFang.save(function(err, book) {
+  // Handle errors and save the id for reference. Let&#39;s assume that the id is &amp;quot;asd98123jg0aasdlfk9&amp;quot;
+});
+
+var john = new Person({
+  name: &amp;quot;John&amp;quot;,
+  books: [
+    &amp;quot;asd98123jg0aasdlfk9&amp;quot; // Id of the book that we want. Must be a valid ObjectId format
+  ]
+});
+
+john.save();
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Populating the books array when requesting john:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;Person.findOne({name: &amp;quot;John&amp;quot;})
+	.populate(&#39;books&#39;)
+	.exec(function(err, person) {
+	  if (err) return handleError(err);
+	  console.log(person.books) // prints [{&amp;quot;_id&amp;quot;: &amp;quot;asd98123jg0aasdlfk9&amp;quot;, &amp;quot;title&amp;quot;: &amp;quot;White Fang&amp;quot;}];
+	})
+
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
