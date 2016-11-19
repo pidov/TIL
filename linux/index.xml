@@ -40,9 +40,8 @@ Next edit the hosts file:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;sudo vim /etc/hosts
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;Replace all occurances of the old hostname with the new and save the file.&lt;/p&gt;
-
-&lt;p&gt;Finally reboot:&lt;/p&gt;
+&lt;p&gt;Replace all occurances of the old hostname with the new and save the file.
+Finally reboot:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;sudo reboot
 &lt;/code&gt;&lt;/pre&gt;
