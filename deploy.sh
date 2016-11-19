@@ -12,7 +12,7 @@ git add .
 git commit -m "INIT: initial commit on gh-pages branch"
 
 # Push to remote gh-pages branch
-git push origin gh-pages
+git push -f origin gh-pages
 
 # Return to master branch
 git checkout master
