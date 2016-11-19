@@ -18,7 +18,6 @@ sudo vim /etc/hosts
 ``` 
 
 Replace all occurances of the old hostname with the new and save the file.
-
 Finally reboot:
 
 ```
