@@ -1,35 +1,9 @@
 # Today I learned
 
-A collection of small nifty trics that I learn on a day to day basis.
+A collection of useful snippets for various technologies that I learn on a daily basis. Use at your own risk.
 
-## Categories
+All tips, tricks and code snippets are available at https://pidov.github.io/TIL/
 
-* [Git](#git)
-* [Linux](#linux)
-* [Mongoose](#mongoose)
-* [npm](#npm)
-* [VIM](#vim)
-* [Windows](#windows)
+## Development
 
----
-
-## Git
-- [Renaming a branch](git/renaming-a-branch.md)
-
-## Linux
-- [iptables](linux/iptables.md)
-
-## Mongoose
-- [How to refrence a document from another document](mongoose/reference-document-from-another-document.md)
-
-## npm
-- [How to disable npm progress bar?](disable-npm-progress-bar.md)
-
-## Vim
-- [Configuring indentation](vim/configuring-indentation.md)
-- [Getting the location of .vimrc](vim/location-of-vimrc.md)
-- [Swap two lines](vim/swap-lines.md)
-
-## Windows
-- [Setting environment variables](windows/setting-environment-variables.md)
-
+The project is built with hugo.
